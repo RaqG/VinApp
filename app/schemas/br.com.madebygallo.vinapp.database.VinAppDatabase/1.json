@@ -1,0 +1,174 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "b55d2194463df954bb5ad4de3276d4c6",
+    "entities": [
+      {
+        "tableName": "wine",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_name` TEXT, `producer` TEXT, `importer` TEXT NOT NULL, `vintage` INTEGER NOT NULL, `alcohol_content` REAL NOT NULL, `volume` INTEGER NOT NULL, `is_reserve` INTEGER NOT NULL, `rating` REAL NOT NULL, `wine_image` TEXT, `barcode` TEXT, `region_id` INTEGER, `grape_variety_id` INTEGER NOT NULL, `wine_variety_id` INTEGER NOT NULL, FOREIGN KEY(`wine_variety_id`) REFERENCES `wine_variety`(`wine_variety_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "wineId",
+            "columnName": "wine_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wineName",
+            "columnName": "wine_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "producer",
+            "columnName": "producer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "importer",
+            "columnName": "importer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vintage",
+            "columnName": "vintage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alcoholContent",
+            "columnName": "alcohol_content",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "volume",
+            "columnName": "volume",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isReserve",
+            "columnName": "is_reserve",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wineImage",
+            "columnName": "wine_image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "barcode",
+            "columnName": "barcode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "regionId",
+            "columnName": "region_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "grapeVarietyId",
+            "columnName": "grape_variety_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wineVarietyId",
+            "columnName": "wine_variety_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_wine_variety_id",
+            "unique": true,
+            "columnNames": [
+              "wine_variety_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_wine_variety_id` ON `${TABLE_NAME}` (`wine_variety_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "wine_variety",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wine_variety_id"
+            ],
+            "referencedColumns": [
+              "wine_variety_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wine_variety",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_variety_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_variety_name` TEXT, `wine_variety_image` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wineVarietyId",
+            "columnName": "wine_variety_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wineVarietyName",
+            "columnName": "wine_variety_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "wineVarietyImage",
+            "columnName": "wine_variety_image",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_variety_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_variety_wine_variety_name",
+            "unique": true,
+            "columnNames": [
+              "wine_variety_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_variety_wine_variety_name` ON `${TABLE_NAME}` (`wine_variety_name`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b55d2194463df954bb5ad4de3276d4c6')"
+    ]
+  }
+}

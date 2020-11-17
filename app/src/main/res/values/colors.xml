@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VinApp Theme -->
+    <color name="colorPrimary">#d32f2f</color>
+    <color name="colorPrimaryDark">#7F0000</color>
+    <color name="colorPrimaryLight">#F05545</color>
+    <color name="colorAccent">#10c227</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorHint">#9E9E9E</color>
+    <color name="colorBackgroundFab">#E0E0E0</color>
+    <color name="colorBackgroundDetail">#EFEBE9</color>
+
+    <!-- Wine Colors -->
+    <color name="red_wine">#B71C1C</color>
+    <color name="rose_wine">#F0524F</color>
+    <color name="white_wine">#FFF9C5</color>
+    <color name="sparkling_wine">#FFEB3B</color>
+    <color name="other_wine">#9E9E9E</color>
+
+</resources>
