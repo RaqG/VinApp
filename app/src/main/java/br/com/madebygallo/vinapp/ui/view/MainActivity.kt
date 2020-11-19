@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), OnActionSelectedListener {
         fabAdd.setOnActionSelectedListener(this)
         addFabItem(
             R.id.fab_bar_code,
-            R.drawable.ic_add_a_photo_black,
+            R.drawable.ic_outline_qr_code_scanner,
             getString(R.string.label_bar_code)
         )
         addFabItem(

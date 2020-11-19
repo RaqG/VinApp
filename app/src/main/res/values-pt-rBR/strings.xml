@@ -9,7 +9,7 @@
     <string name="label_name">Nome</string>
     <string name="label_producer">Produtor</string>
     <string name="label_vintage">Safra</string>
-    <string name="label_alcohol_content">Teor alcóolico</string>
+    <string name="label_alcohol_content">Teor alcoólico</string>
     <string name="label_volume">Volume</string>
     <string name="label_city">Região</string>
     <string name="label_country">País</string>
@@ -25,9 +25,9 @@
     <string name="hint_name">Nome *</string>
     <string name="hint_producer">Produtor *</string>
     <string name="hint_vintage">Safra *</string>
-    <string name="hint_alcohol_content">Teor alcóolico</string>
+    <string name="hint_alcohol_content">Teor alcoólico</string>
     <string name="hint_volume">Volume</string>
-    <string name="hint_reserve">De reserva *</string>
+    <string name="hint_reserve">reserva *</string>
     <string name="hint_city">Região</string>
     <string name="hint_country">País *</string>
     <string name="hint_barcode">Código de barras</string>
@@ -41,7 +41,7 @@
     <string name="hint_add_note">Adicionar uma observação</string>
     <string name="scan_not_found_message">Tentar novamente ou criar um novo vinho?</string>
     <string name="scan_error_message">Não foi possível ler o código de barras</string>
-    <string name="alcohol_content_field_message">Teor alcóolico entre 0 e 100</string>
+    <string name="alcohol_content_field_message">Teor alcoólico entre 0 e 100</string>
     <string name="button_add_new_grape">Adicionar uma nova uva</string>
     <string name="button_open_camera">Abrir câmera</string>
     <string name="button_open_gallery">Abrir galeria</string>

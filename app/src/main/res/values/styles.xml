@@ -16,13 +16,12 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 
-    <style name="CustomTextInputLayout">
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingEnd">16dp</item>
-        <item name="android:paddingStart">16dp</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="errorEnabled">true</item>
+        <item name="hintAnimationEnabled">true</item>
     </style>
 
     <style name="CustomLinearLayout">
@@ -34,11 +33,11 @@
         <item name="layout_constraintStart_toStartOf">parent</item>
     </style>
 
-    <style name="CustomVarietyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:layout_width">match_parent</item>
+    <style name="CustomVarietyButton" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:drawablePadding">16dp</item>
+        <item name="iconPadding">16dp</item>
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:paddingBottom">16dp</item>
         <item name="android:paddingTop">16dp</item>
