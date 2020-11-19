@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity(), OnActionSelectedListener {
     }
 
     private fun searchWines() {
-        viewModel.wines.observe(this@MainActivity, Observer { wines ->
+        viewModel.wines.observe(this@MainActivity, { wines ->
             if (wines.isNullOrEmpty()) emptyWineList() else hasWineList(wines)
         })
         viewModel.getWines()

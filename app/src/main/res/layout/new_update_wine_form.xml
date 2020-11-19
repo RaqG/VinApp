@@ -79,7 +79,7 @@
             app:layout_constraintStart_toEndOf="@+id/input_layout_vintage_alcohol"
             app:layout_constraintTop_toBottomOf="@+id/input_layout_producer"
             app:startIconContentDescription="alcohol content"
-            app:startIconDrawable="@drawable/ic_all_inclusive_black"
+            app:startIconDrawable="@drawable/ic_outline_percentage"
             app:suffixText="%">
 
             <com.google.android.material.textfield.TextInputEditText

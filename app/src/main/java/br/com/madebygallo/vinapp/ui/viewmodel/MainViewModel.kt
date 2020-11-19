@@ -31,6 +31,7 @@ class MainViewModel @ViewModelInject constructor(
 
     fun getWines() {
         viewModelScope.launch {
+
             var list: List<Wine>
             withContext(Dispatchers.IO) {
                 list = repository.getWines()
